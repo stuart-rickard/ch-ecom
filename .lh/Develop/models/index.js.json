@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Develop/models/index.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1643923309507,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1643923309507,
+            "name": "Commit-0",
+            "content": "// import models\nconst Product = require(\"./Product\");\nconst Category = require(\"./Category\");\nconst Tag = require(\"./Tag\");\nconst ProductTag = require(\"./ProductTag\");\n\n// Products belongsTo Category\nProduct.belongsTo(Category, {\n  foreignKey: \"id\",\n  onDelete: \"SET NULL\",\n});\n// Categories have many Products\nCategory.hasMany(Product, {\n  foreignKey: \"id\",\n});\n// Products belongToMany Tags (through ProductTag)\n\n// Tags belongToMany Products (through ProductTag)\n\nmodule.exports = {\n  Product,\n  Category,\n  Tag,\n  ProductTag,\n};\n"
+        }
+    ]
+}

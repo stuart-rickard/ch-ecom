@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Develop/models/Product.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1643921536423,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1643921536423,
+            "name": "Commit-0",
+            "content": "// import important parts of sequelize library\nconst { Model, DataTypes } = require(\"sequelize\");\n// import our database connection from config.js\nconst sequelize = require(\"../config/connection\");\n\n// Initialize Product model (table) by extending off Sequelize's Model class\nclass Product extends Model {}\n\n// set up fields and rules for Product model\nProduct.init(\n  {\n    // define columns\n    id: {\n      type: DataTypes.INTEGER,\n      allowNull: false,\n      primaryKey: true,\n      autoIncrement: true,\n    },\n    product_name: {\n      type: DataTypes.STRING,\n      allowNull: false,\n    },\n    price: {\n      // NEEDS WORK\n      type: DataTypes.DECIMAL(2), //CHECK\n      allowNull: false,\n      validate: {\n        isDecimal: true, //CHECK\n      },\n    },\n    stock: {\n      // NEEDS WORK\n      type: DataTypes.INTEGER,\n      allowNull: false,\n      default: 10, //CHECK\n      validate: {\n        isNumber: true, //CHECK doesn't it have to be a number due to datatype?  we could check that it's a positive number.\n      },\n    },\n    category_id: {\n      type: DataTypes.INTEGER,\n      references: {\n        model: \"category\",\n        key: \"id\",\n      },\n    },\n  },\n  {\n    sequelize,\n    timestamps: false,\n    freezeTableName: true,\n    underscored: true,\n    modelName: \"product\",\n  }\n);\n\nmodule.exports = Product;\n"
+        }
+    ]
+}

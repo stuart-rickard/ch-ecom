@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Develop/.gitignore",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1643919821639,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1643919821639,
+            "name": "Commit-0",
+            "content": "node_modules\n.env\n.DS_Store\n.lh"
+        }
+    ]
+}

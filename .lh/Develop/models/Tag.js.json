@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Develop/models/Tag.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1643922801992,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1643922801992,
+            "name": "Commit-0",
+            "content": "const { Model, DataTypes } = require(\"sequelize\");\n\nconst sequelize = require(\"../config/connection.js\");\n\nclass Tag extends Model {}\n\nTag.init(\n  {\n    // define columns\n    id: {\n      type: DataTypes.INTEGER,\n      allowNull: false,\n      primaryKey: true,\n      autoIncrement: true,\n    },\n    tag_name: {\n      type: DataTypes.STRING,\n    },\n  },\n  {\n    sequelize,\n    timestamps: false,\n    freezeTableName: true,\n    underscored: true,\n    modelName: \"tag\",\n  }\n);\n\nmodule.exports = Tag;\n"
+        }
+    ]
+}

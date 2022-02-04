@@ -1,0 +1,26 @@
+{
+    "sourceFile": "Develop/models/ProductTag.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1643922379080,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1643922399282,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,16 +11,16 @@\n       type: DataTypes.INTEGER,\n       allowNull: false,\n       primaryKey: true,\n       autoIncrement: true,\n-    }\n+    },\n     product_id: {\n       type: DataTypes:INTEGER,\n       references: {\n         model: \"product\",\n         key: \"id\",\n       },\n-    }\n+    },\n     tag_id: {\n       type: DataTypes:INTEGER,\n       references: {\n         model: \"tag\",\n"
+                },
+                {
+                    "date": 1643922477649,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n-const { Model, DataTypes } = require('sequelize');\n+const { Model, DataTypes } = require(\"sequelize\");\n \n-const sequelize = require('../config/connection');\n+const sequelize = require(\"../config/connection\");\n \n class ProductTag extends Model {}\n \n ProductTag.init(\n@@ -13,28 +13,28 @@\n       primaryKey: true,\n       autoIncrement: true,\n     },\n     product_id: {\n-      type: DataTypes:INTEGER,\n+      type: DataTypes.INTEGER,\n       references: {\n         model: \"product\",\n         key: \"id\",\n       },\n     },\n     tag_id: {\n-      type: DataTypes:INTEGER,\n+      type: DataTypes.INTEGER,\n       references: {\n         model: \"tag\",\n-        key: \"id\"\n-      }\n-    }\n+        key: \"id\",\n+      },\n+    },\n   },\n   {\n     sequelize,\n     timestamps: false,\n     freezeTableName: true,\n     underscored: true,\n-    modelName: 'product_tag',\n+    modelName: \"product_tag\",\n   }\n );\n \n module.exports = ProductTag;\n"
+                }
+            ],
+            "date": 1643922379080,
+            "name": "Commit-0",
+            "content": "const { Model, DataTypes } = require('sequelize');\n\nconst sequelize = require('../config/connection');\n\nclass ProductTag extends Model {}\n\nProductTag.init(\n  {\n    // define columns\n    id: {\n      type: DataTypes.INTEGER,\n      allowNull: false,\n      primaryKey: true,\n      autoIncrement: true,\n    }\n    product_id: {\n      type: DataTypes:INTEGER,\n      references: {\n        model: \"product\",\n        key: \"id\",\n      },\n    }\n    tag_id: {\n      type: DataTypes:INTEGER,\n      references: {\n        model: \"tag\",\n        key: \"id\"\n      }\n    }\n  },\n  {\n    sequelize,\n    timestamps: false,\n    freezeTableName: true,\n    underscored: true,\n    modelName: 'product_tag',\n  }\n);\n\nmodule.exports = ProductTag;\n"
+        }
+    ]
+}

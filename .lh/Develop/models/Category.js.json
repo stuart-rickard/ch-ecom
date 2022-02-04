@@ -1,0 +1,18 @@
+{
+    "sourceFile": "Develop/models/Category.js",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1643920506771,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1643920506771,
+            "name": "Commit-0",
+            "content": "const { Model, DataTypes } = require(\"sequelize\");\n\nconst sequelize = require(\"../config/connection.js\");\n\nclass Category extends Model {}\n\nCategory.init(\n  {\n    // define columns\n    id: {\n      type: DataTypes.INTEGER,\n      allowNull: false,\n      primaryKey: true,\n      autoIncrement: true,\n    },\n    category_name: {\n      type: DataTypes.STRING,\n      allowNull: false,\n    },\n  },\n  {\n    sequelize,\n    timestamps: false,\n    freezeTableName: true,\n    underscored: true,\n    modelName: \"category\",\n  }\n);\n\nmodule.exports = Category;\n"
+        }
+    ]
+}
