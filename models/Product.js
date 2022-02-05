@@ -21,20 +21,19 @@ Product.init(
       allowNull: false,
     },
     price: {
-      // NEEDS WORK
-      type: DataTypes.DECIMAL(2), //CHECK
+      type: DataTypes.DECIMAL(10, 2),
       allowNull: false,
       validate: {
-        isDecimal: true, //CHECK
+        isNumeric: true,
       },
     },
     stock: {
-      // NEEDS WORK
       type: DataTypes.INTEGER,
       allowNull: false,
-      default: 10, //CHECK
+      defaultValue: 10,
       validate: {
-        isNumber: true, //CHECK doesn't it have to be a number due to datatype?  we could check that it's a positive number.
+        isNumeric: true,
+        min: 0,
       },
     },
     category_id: {

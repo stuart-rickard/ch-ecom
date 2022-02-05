@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1643921536423,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1644019851393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,22 +20,21 @@\n       type: DataTypes.STRING,\n       allowNull: false,\n     },\n     price: {\n-      // NEEDS WORK\n-      type: DataTypes.DECIMAL(2), //CHECK\n+      type: DataTypes.DECIMAL(10, 2),\n       allowNull: false,\n       validate: {\n-        isDecimal: true, //CHECK\n+        isNumeric: true,\n       },\n     },\n     stock: {\n-      // NEEDS WORK\n       type: DataTypes.INTEGER,\n       allowNull: false,\n-      default: 10, //CHECK\n+      defaultValue: 10,\n       validate: {\n-        isNumber: true, //CHECK doesn't it have to be a number due to datatype?  we could check that it's a positive number.\n+        isNumeric: true,\n+        min: 0,\n       },\n     },\n     category_id: {\n       type: DataTypes.INTEGER,\n"
                 }
             ],
             "date": 1643921536423,
